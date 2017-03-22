@@ -38,10 +38,19 @@ h1, h2, h3, h4 {
 
 h1 {
   font-size:5.062em;
+
+  &#logo {
+    color: $main-color;
+    margin-bottom:0;
+  }
 }
 
 h2 {
   font-size:3.375em;
+
+  &#slogan {
+    color: $mixed-main-white;
+  }
 }
 
 h3 {
@@ -52,14 +61,14 @@ h4 {
   font-size:1.5em;
 }
 
-
-
 body {
   background: #fafafa;
   font-family: $body-font-family;
   font-weight: $body-font-weight-normal;
   font-size:1.4em;
   color: #333;
+
+  margin: 0;
 }
 
 header {
@@ -86,6 +95,11 @@ main {
 
   section {
     padding: $default-padding;
+    min-height:50vh;
+
+    &#cars {
+      background: $mixed-secondary-white;
+    }
 
     &#faq{
 
