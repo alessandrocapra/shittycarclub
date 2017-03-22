@@ -1,26 +1,31 @@
 // bower:scss
 // endbower
 
+@import url('https://fonts.googleapis.com/css?family=Droid+Sans:400,700');
+
+// variables
+$body-font-family: 'Droid Sans', Helvetica, sans-serif;
+$body-font-weight-normal: 400;
+$body-font-weight-bold: 700;
+
+// typography
+h1, h2, h3, h4 {
+  font-weight: $body-font-weight-bold;
+}
+
 body {
   background: #fafafa;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: $body-font-family;
+  font-weight: $body-font-weight-normal;
   color: #333;
 }
 
-.hero-unit {
-  margin: 50px auto 0 auto;
-  width: 300px;
-  font-size: 18px;
-  font-weight: 200;
-  line-height: 30px;
-  background-color: #eee;
-  border-radius: 6px;
-  padding: 60px;
-  h1 {
-    font-size: 60px;
-    line-height: 1;
-    letter-spacing: -1px;
-  }
+header {
+  min-height:90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .browserupgrade {
