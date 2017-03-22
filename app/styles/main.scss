@@ -3,29 +3,182 @@
 
 @import url('https://fonts.googleapis.com/css?family=Droid+Sans:400,700');
 
+@import "functions";
+
 // variables
 $body-font-family: 'Droid Sans', Helvetica, sans-serif;
 $body-font-weight-normal: 400;
 $body-font-weight-bold: 700;
+
+$default-padding: 3em;
+$default-margin: 1em;
+
+// colors
+$main-color: hsl(20,100%, 50%);
+$complementary-color: complement($main-color);
+
+// neutral palette for main color
+$soft-main-color: harmonious-mix($complementary-color, $main-color);
+$mixed-main-complementary: mix-neutral($soft-main-color);
+$mixed-main-white: lighten($mixed-main-complementary, 33);
+$mixed-main-black: darken($mixed-main-complementary, 33);
+$desaturated-main-color: desaturate-neutral($soft-main-color);
+
+// neutral palette for secondary color
+$soft-secondary-color: harmonious-mix($main-color, $complementary-color);
+$mixed-secondary-complementary: mix-neutral($soft-secondary-color);
+$mixed-secondary-white: lighten($mixed-secondary-complementary, 33);
+$mixed-secondary-black: darken($mixed-secondary-complementary, 33);
+$desaturated-secondary-color: desaturate-neutral($soft-secondary-color);
 
 // typography
 h1, h2, h3, h4 {
   font-weight: $body-font-weight-bold;
 }
 
+h1 {
+  font-size:5.062em;
+}
+
+h2 {
+  font-size:3.375em;
+}
+
+h3 {
+  font-size:2.25em;
+}
+
+h4 {
+  font-size:1.5em;
+}
+
+
+
 body {
   background: #fafafa;
   font-family: $body-font-family;
   font-weight: $body-font-weight-normal;
+  font-size:1.4em;
   color: #333;
 }
 
 header {
-  min-height:90vh;
+  min-height:80vh;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+
+  video {
+    position: absolute;
+    min-height: 100%;
+    width: 100%;
+    top: -15%;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -100;
+  }
+}
+
+main {
+
+  section {
+    padding: $default-padding;
+
+    &#faq{
+
+      .square {
+        width:100px;
+        height: 100px;
+        display: inline-block;
+        margin-right:10px;
+        border:1px solid black;
+
+        &.main {
+          &.one {
+            background: $main-color;
+            margin-right:50px;
+          }
+
+          &.two {
+            background: $soft-main-color;
+          }
+
+          &.three {
+            background: $mixed-main-complementary;
+          }
+
+          &.four {
+            background: $mixed-main-white;
+          }
+
+          &.five {
+            background: $mixed-main-black;
+          }
+
+          &.six {
+            background: $desaturated-main-color;
+          }
+        }
+
+        &.secondary {
+          &.one {
+            background: $complementary-color;
+            margin-right:50px;
+          }
+
+          &.two {
+            background: $soft-secondary-color;
+          }
+
+          &.three {
+            background: $mixed-secondary-complementary;
+          }
+
+          &.four {
+            background: $mixed-secondary-white;
+          }
+
+          &.five {
+            background: $mixed-secondary-black;
+          }
+
+          &.six {
+            background: $desaturated-secondary-color;
+          }
+        }
+      }
+    }
+
+    &#pricing {
+      display: flex;
+      flex-direction: column;
+      //color: $soft-main-complementary;
+
+      div {
+        display: flex;
+
+        article {
+          border:3px solid darkblue;
+          margin-left:$default-margin;
+          margin-right:$default-margin;
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+
+          flex-basis:calc(50% - #{$default-margin});
+        }
+      }
+    }
+  }
+}
+
+footer {
+  padding:$default-padding;
 }
 
 .browserupgrade {
