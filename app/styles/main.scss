@@ -80,13 +80,12 @@ p {
 
 .mySlides {
   display: flex;
+  justify-content: space-around;
+  align-items: center;
 
   img {
     width:300px;
-    height: auto;
-
-    display: block;
-    margin: 0 auto;
+    height: 520px;
 
     &.select-car {
       background: url(../images/Selectacar.png) no-repeat center;
@@ -129,6 +128,7 @@ p {
   //position: absolute;
   //bottom: 8px;
   //width: 100%;
+  display: inline-block;
   text-align: center;
 }
 
@@ -220,6 +220,7 @@ main {
     &#how-works {
       background: $soft-main-color;
       color: $mixed-main-black;
+      min-height:auto;
     }
 
     &#cars {
