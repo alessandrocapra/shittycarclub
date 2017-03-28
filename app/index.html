@@ -26,8 +26,15 @@
     <!--[if lt IE 10]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-
-    <header>
+    <nav role="navigation">
+      <ul class="flex-container">
+        <li><a href="#">What</a></li>
+        <li><a href="#">How</a></li>
+        <li><a href="#">Pricing</a></li>
+        <li><a href="#">Faq</a></li>
+      </ul>
+    </nav>
+    <header class="flex-container" role="banner">
       <video autoplay muted loop>
         <source src="videos/NYC-Blurred-Traffic/Webm/NYC-Blurred-Traffic.webm" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
         <source src="videos/NYC-Blurred-Traffic/Mp4/NYC-Blurred-Traffic.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
@@ -35,7 +42,7 @@
       <h1 id="logo">Shitty Car Club</h1>
       <h2 id="slogan">When you just need a fucking car.</h2>
     </header>
-    <main>
+    <main class="main-container" role="main">
       <section id="cars">
         <h2>Going from place A to B. <br> That simple.</h2>
         <p>The traditional rental companies usually offer really fancy cars to their customers. Audi, Mercedes, you name it.</p>
@@ -45,7 +52,7 @@
       <section id="how-works">
         <h2>How it works</h2>
         <div class="slideshow-container">
-          <div class="mySlides fade">
+          <div class="flex-container mySlides fade">
             <div class="text">
               <h3>Find a car</h3>
               <p>Locate the closest car to you.</p>
@@ -99,7 +106,7 @@
         <div class="square secondary six"></div>
 
       </section>
-      <section id="pricing">
+      <section class="flex-container" id="pricing">
         <h2>Pricing</h2>
         <p>It's that simple!</p>
         <div>
@@ -117,7 +124,7 @@
         <h2>Call to actions</h2>
       </section>
     </main>
-    <footer>Copyright 2017 - Shitty Car Club</footer>
+    <footer role="contentinfo">Copyright 2017 - Shitty Car Club</footer>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
