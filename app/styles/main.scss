@@ -55,6 +55,11 @@
       background: url(../images/Selectacar.png) no-repeat center;
       background-size: 80%;
     }
+
+    &.unlock {
+      background: url(../images/Unlock.png) no-repeat center;
+      background-size: 80%;
+    }
   }
 }
 
@@ -86,12 +91,6 @@
 
 /* Caption text */
 .text {
-  //color: #f2f2f2;
-  //font-size: 15px;
-  //padding: 8px 12px;
-  //position: absolute;
-  //bottom: 8px;
-  //width: 100%;
   display: inline-block;
   text-align: center;
 }
@@ -141,6 +140,26 @@
 
 // General styling
 
+form {
+  align-items: center;
+}
+
+input {
+  font-size:1em;
+  padding:$default-padding/4;
+  margin:$default-margin;
+  border:0;
+  border-radius:3px;
+  min-width:15em;
+}
+
+button {
+  @extend input;
+  background: $soft-main-color;
+  color: $mixed-main-white;
+  min-width:auto;
+}
+
 body {
   background: #fafafa;
   font-family: $body-font-family;
@@ -153,23 +172,31 @@ body {
 
 nav {
   width: 100%;
+  position: fixed;
+  top: 0;
+  z-index:1;
+  background: rgba(0,0,0,.3);
 
   @include forLargeScreens(640) {
     margin-right: 1.67%;
   }
 
   ul {
+    display: flex;
     list-style-type: none;
     padding-left: 0;
-    padding-top:$default-padding/2;
+    padding-top:$default-padding/4;
+    padding-bottom:$default-padding/4;
+    margin: 0;
+
 
     justify-content: flex-end;
   }
 
   a {
-    color: $complementary-color;
+    color: #ccc;
     margin-right:$default-padding/2;
-    padding: $default-padding/2;
+    padding: $default-padding/4;
     text-decoration: none;
   }
 }
@@ -276,30 +303,59 @@ main {
 
     &#pricing {
       flex-direction: column;
+      background: $mixed-main-white;
       //color: $soft-main-complementary;
 
-      div {
+      article {
+        padding: $default-padding;
+        color: #fff;
+
         display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
 
-        article {
-          border:3px solid darkblue;
-          margin-left:$default-margin;
+        flex-basis:calc(50% - #{$default-margin});
+
+        &:first-of-type {
+          background: $mixed-secondary-complementary;
           margin-right:$default-margin;
+        }
 
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          flex-direction: column;
-
-          flex-basis:calc(50% - #{$default-margin});
+        &:last-of-type {
+          background: $mixed-main-complementary;
+          margin-left:$default-margin;
         }
       }
+    }
+
+    &#call-to-action {
+      font-size:.8em;
+      width: 100%;
+      position: fixed;
+      bottom:0;
+
+      justify-content: space-around;
+      align-items: center;
+      padding:$default-padding/3;
+      min-height: 10vh;
+      background: $soft-secondary-color;
+
+      p {
+        flex-basis: 60%;
+        max-width:50em;
+      }
+
+      //form {
+      //  flex-basis: 40%;
+      //}
     }
   }
 }
 
 footer {
   padding:$default-padding;
+  margin-bottom:10vh;
 }
 
 .browserupgrade {

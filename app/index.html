@@ -27,7 +27,7 @@
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
     <nav role="navigation">
-      <ul class="flex-container">
+      <ul>
         <li><a href="#">What</a></li>
         <li><a href="#">How</a></li>
         <li><a href="#">Pricing</a></li>
@@ -60,15 +60,15 @@
             <img src="images/smartphone.png" alt="Smartphone cover" class="select-car">
           </div>
 
-          <div class="mySlides fade">
+          <div class="flex-container mySlides fade">
             <div class="text">
-              <h3>Find a car</h3>
-              <p>Locate the closest car to you.</p>
+              <h3>Unlock the car <br> and drive it!</h3>
+              <p>Quick and easy.</p>
             </div>
-            <img src="images/smartphone.png" alt="Smartphone cover" class="select-car">
+            <img src="images/smartphone.png" alt="Smartphone cover" class="unlock">
           </div>
 
-          <div class="mySlides fade">
+          <div class="flex-container mySlides fade">
             <div class="text">
               <h3>Find a car</h3>
               <p>Locate the closest car to you.</p>
@@ -104,12 +104,11 @@
         <div class="square secondary four"></div>
         <div class="square secondary five"></div>
         <div class="square secondary six"></div>
-
       </section>
       <section class="flex-container" id="pricing">
         <h2>Pricing</h2>
         <p>It's that simple!</p>
-        <div>
+        <div class="flex-container">
           <article>
             <h3>Just for an hour</h3>
             <p>5€ + X/Km</p>
@@ -122,6 +121,13 @@
       </section>
       <section>
         <h2>Call to actions</h2>
+      </section>
+      <section class="flex-container" role="form" id="call-to-action">
+        <p>Want to receive news about the service? Subscribe to the newsletter!</p>
+        <form action="#" class="flex-container">
+          <input type="email" placeholder="Email-address">
+          <button type="submit">Subscribe</button>
+        </form>
       </section>
     </main>
     <footer role="contentinfo">Copyright 2017 - Shitty Car Club</footer>
