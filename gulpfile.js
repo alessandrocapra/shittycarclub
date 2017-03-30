@@ -9,6 +9,8 @@ const runSequence = require('run-sequence');
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
 
+var ghPages = require('gulp-gh-pages');
+
 var dev = true;
 
 gulp.task('styles', () => {
@@ -158,6 +160,11 @@ gulp.task('wiredep', () => {
 
 gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras'], () => {
   return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
+});
+
+gulp.task('deploy', function() {
+  return gulp.src('./dist/**/*')
+    .pipe(ghPages({branch: "master"}));
 });
 
 gulp.task('default', () => {
