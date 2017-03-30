@@ -225,13 +225,9 @@ main {
   section {
     padding: $default-padding;
     min-height:50vh;
-    
-    .content-overlay {
-      background: rgba(255,255,255,0.4);
-    }
 
     &#cars {
-      background: $mixed-secondary-white url(../images/old_car.jpg) no-repeat right;
+      background: $mixed-secondary-white;
       //filter: blur(4px);
       background-size:cover;
       color: $mixed-secondary-black;
