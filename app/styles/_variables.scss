@@ -7,6 +7,18 @@ $body-line-height: 1.4;
 $default-padding: 3em;
 $default-margin: 1em;
 
+
+/* MAYBE A BETTER COLOR SCHEME
+
+Dark        #373737
+Brownish    #807065
+Cream       #fff1b9
+Orange      #fd5b0b
+Red         #ff0100
+
+*/
+
+
 // colors
 $main-color: hsl(20,100%, 50%);
 $complementary-color: complement($main-color);
