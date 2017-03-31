@@ -1,37 +1,41 @@
 // typography
 h1, h2, h3, h4 {
-  font-weight: $body-font-weight-bold;
+  font-family: $headings-font-family;
+  font-weight: $font-weight-normal;
   margin-top: 0;
   margin-bottom: .4em;
 }
 
 h1 {
-  font-size:4.42em;
+  font-size:8.1em;
 
   &#logo {
-    color: $main-color;
+    color: $orange;
+    font-weight:$font-weight-bold;
     margin-bottom:0;
+    //text-shadow: 3px 2px 0 $cream;
+    letter-spacing:1px;
   }
 }
 
 h2 {
-  font-size:3.316em;
+  font-size:5.4em;
 
   &#slogan {
-    color: $mixed-main-white;
+    color: $cream;
   }
 }
 
 h3 {
-  font-size:2.488em;
+  font-size:3.6em;
 }
 
 h4 {
-  font-size:1.866em;
+  font-size:2.4em;
 }
 
 p {
-  font-size:1.4em;
+  font-size:$body-font-size;
   line-height:$body-line-height;
   max-width: 30em;
 }

@@ -1,7 +1,7 @@
 // bower:scss
 // endbower
 
-@import url('https://fonts.googleapis.com/css?family=Droid+Sans:400,700');
+@import url('https://fonts.googleapis.com/css?family=Cardo:400,700|Pathway+Gothic+One');
 
 @import "functions";
 @import "variables";
@@ -44,7 +44,7 @@
 }
 
 .mySlides {
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
 
   img {
@@ -93,6 +93,7 @@
 .text {
   display: inline-block;
   text-align: center;
+  margin-right:$default-margin;
 }
 
 /* Number text (1/3 etc) */
@@ -143,10 +144,9 @@
 body {
   background: #fafafa;
   font-family: $body-font-family;
-  font-weight: $body-font-weight-normal;
+  font-weight: $font-weight-normal;
   font-size:1em;
   color: #333;
-
   margin: 0;
 }
 
@@ -167,7 +167,6 @@ button {
   @extend input;
   background: $soft-main-color;
   color: $mixed-main-white;
-  min-width:auto;
 }
 
 nav {
@@ -194,15 +193,23 @@ nav {
   }
 
   a {
+    font-size:$body-font-size;
+    font-family:$headings-font-family;
+    letter-spacing:5px;
+    text-transform: uppercase;
     color: #ccc;
     margin-right:$default-padding/2;
     padding: $default-padding/4;
     text-decoration: none;
+    
+    &:hover {
+      color: $orange;
+    }
   }
 }
 
 header {
-  min-height:70vh;
+  min-height:80vh;
   width: 100%;
   justify-content: center;
   align-items: center;
@@ -240,67 +247,6 @@ main {
 
     &#faq{
 
-      .square {
-        width:100px;
-        height: 100px;
-        display: inline-block;
-        margin-right:10px;
-        border:1px solid black;
-
-        &.main {
-          &.one {
-            background: $main-color;
-            margin-right:50px;
-          }
-
-          &.two {
-            background: $soft-main-color;
-          }
-
-          &.three {
-            background: $mixed-main-complementary;
-          }
-
-          &.four {
-            background: $mixed-main-white;
-          }
-
-          &.five {
-            background: $mixed-main-black;
-          }
-
-          &.six {
-            background: $desaturated-main-color;
-          }
-        }
-
-        &.secondary {
-          &.one {
-            background: $complementary-color;
-            margin-right:50px;
-          }
-
-          &.two {
-            background: $soft-secondary-color;
-          }
-
-          &.three {
-            background: $mixed-secondary-complementary;
-          }
-
-          &.four {
-            background: $mixed-secondary-white;
-          }
-
-          &.five {
-            background: $mixed-secondary-black;
-          }
-
-          &.six {
-            background: $desaturated-secondary-color;
-          }
-        }
-      }
     }
 
     &#pricing {
@@ -333,24 +279,27 @@ main {
 
     &#call-to-action {
       font-size:.8em;
-      width: 100%;
+      width: 20%;
       position: fixed;
       bottom:0;
+      right: 0;
 
+      flex-wrap: wrap;
       justify-content: space-around;
       align-items: center;
-      padding:$default-padding/3;
-      min-height: 10vh;
+      padding:$default-padding;
       background: $soft-secondary-color;
 
       p {
-        flex-basis: 60%;
-        max-width:50em;
+        //flex-basis: 60%;
+        //max-width:50em;
       }
 
-      //form {
+      form {
       //  flex-basis: 40%;
-      //}
+        display: flex;
+        flex-direction: column;
+      }
     }
   }
 }
