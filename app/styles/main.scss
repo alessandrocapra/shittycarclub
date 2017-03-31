@@ -140,6 +140,16 @@
 
 // General styling
 
+body {
+  background: #fafafa;
+  font-family: $body-font-family;
+  font-weight: $body-font-weight-normal;
+  font-size:1em;
+  color: #333;
+
+  margin: 0;
+}
+
 form {
   align-items: center;
 }
@@ -158,16 +168,6 @@ button {
   background: $soft-main-color;
   color: $mixed-main-white;
   min-width:auto;
-}
-
-body {
-  background: #fafafa;
-  font-family: $body-font-family;
-  font-weight: $body-font-weight-normal;
-  font-size:1.4em;
-  color: #333;
-
-  margin: 0;
 }
 
 nav {
