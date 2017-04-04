@@ -60,6 +60,11 @@
       background: url(../images/Unlock.png) no-repeat center;
       background-size: 80%;
     }
+
+    &.parking {
+      background: url(../images/parking.png) no-repeat center;
+      background-size: 80%;
+    }
   }
 }
 
@@ -123,8 +128,7 @@
 
 /* Fading animation */
 .fade {
-  animation: fade 0.5s;
-  animation-delay: 2s;
+  animation: fade 1.5s;
 }
 
 @-webkit-keyframes fade {
@@ -269,8 +273,13 @@ main {
     }
 
     &#how-works {
-      background: $cream;
-      color: $dark;
+      color: #fff;
+
+      background: linear-gradient(
+          rgba(0, 0, 0, 0.45),
+          rgba(0, 0, 0, 0.45)
+      ), url(../images/blurred-traffic.jpg) center no-repeat;
+      background-size:cover;
     }
 
     &#faq{
