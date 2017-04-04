@@ -249,6 +249,10 @@ main {
     padding: $default-padding;
     min-height:50vh;
 
+    h2 {
+      margin-bottom: 0;
+    }
+
     &#cars {
       background: $mixed-secondary-white;
       //filter: blur(4px);
@@ -279,6 +283,7 @@ main {
           rgba(0, 0, 0, 0.45),
           rgba(0, 0, 0, 0.45)
       ), url(../images/blurred-traffic.jpg) center no-repeat;
+      background-attachment: fixed;;
       background-size:cover;
     }
 
@@ -316,14 +321,23 @@ main {
       }
 
       article {
-        padding: $default-padding;
         color: #fff;
+        text-align: center;
+        padding:$default-padding;
 
         display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
+        //justify-content: center;
+        align-items: flex-start;
+        flex-wrap: wrap;
 
+        p {
+          width: 100%;
+        }
+
+        header {
+          width: 100%;
+          min-height:10vh;
+        }
 
         &:first-of-type {
           background: $mixed-secondary-complementary;
@@ -349,13 +363,6 @@ main {
       justify-content: flex-end;
       padding:$default-padding/2;
       background: $soft-secondary-color;
-
-      p, h4 {
-        //flex-basis: 60%;
-        //max-width:50em;
-        //margin: 0;
-        //padding: 0 1.5em;
-      }
 
       form {
         //flex-basis: 100%;
