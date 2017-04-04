@@ -13,8 +13,12 @@
     var i;
     var slides = document.getElementsByClassName('mySlides');
     var dots = document.getElementsByClassName('dot');
-    if (n > slides.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = slides.length}
+    if (n > slides.length) {
+      slideIndex = 1
+    }
+    if (n < 1) {
+      slideIndex = slides.length
+    }
     for (i = 0; i < slides.length; i++) {
       slides[i].style.display = 'none';
     }
@@ -25,6 +29,8 @@
     dots[slideIndex-1].className += ' active';
   }
 
+
+  // navigation from menu to content
   $(function() {
     $('a[href*="#"]:not([href="#"])').click(function() {
       if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {

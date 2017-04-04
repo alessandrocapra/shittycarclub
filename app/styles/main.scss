@@ -123,10 +123,8 @@
 
 /* Fading animation */
 .fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
+  animation: fade 0.5s;
+  animation-delay: 2s;
 }
 
 @-webkit-keyframes fade {
@@ -138,6 +136,7 @@
   from {opacity: .4}
   to {opacity: 1}
 }
+
 
 // General styling
 
@@ -251,6 +250,22 @@ main {
       //filter: blur(4px);
       background-size:cover;
       color: $mixed-secondary-black;
+
+      .content {
+        display: flex;
+        justify-content: space-between;
+
+        div {
+          flex-basis:40%;
+        }
+      }
+
+      img {
+        transform: scale(.9) rotate(-5deg) translateY(-100px);
+        padding: $default-padding/3;
+        border-radius: 5px;
+        background: #fff;
+      }
     }
 
     &#how-works {
