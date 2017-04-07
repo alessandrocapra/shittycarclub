@@ -170,7 +170,7 @@ input {
 button {
   @extend input;
   font-family:$headings-font-family;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
   font-weight:$font-weight-bold;
   display: block;
   margin: 0 auto;
@@ -375,13 +375,17 @@ main {
     }
 
     &#pricing {
-      background: $mixed-main-white;
+      background: linear-gradient(
+          rgba($cream, 0.8),
+          rgba($cream, 0.8)
+      ), url(../images/oldcar.jpg) center no-repeat;
+      background-size:cover;
 
       flex-wrap: wrap;
       justify-content: center;
 
       & > * {
-        flex-basis: 100%;
+        flex: 1 1 100%;
       }
 
       .flex-container {
@@ -393,6 +397,8 @@ main {
         color: #fff;
         text-align: center;
         padding:$default-padding;
+        background: $dark;
+        border-radius: 3px;
 
         display: flex;
         //justify-content: center;
@@ -401,6 +407,8 @@ main {
 
         p {
           width: 100%;
+          font-size:$body-font-size*2;
+
         }
 
         header {
@@ -409,12 +417,12 @@ main {
         }
 
         &:first-of-type {
-          background: $mixed-secondary-complementary;
+
           margin-right:$default-margin;
         }
 
         &:last-of-type {
-          background: $mixed-main-complementary;
+
           margin-left:$default-margin;
         }
       }
@@ -447,12 +455,12 @@ main {
 footer {
   display: flex;
   justify-content: center;
-  color: $dark;
+  color: $cream;
 
   font-family:$headings-font-family;
 
   //padding:$default-padding;
-  background: $orange;
+  background: $dark;
 }
 
 .browserupgrade {
