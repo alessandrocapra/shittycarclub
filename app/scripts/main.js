@@ -34,7 +34,7 @@ function showSlides(n) {
 $(document).ready(function(){
   $('#interested').on('click', function () {
     $('html, body').animate({
-      scrollTop: $("#how-works").offset().top
+      scrollTop: $('#how-works').offset().top
     }, 1000);
   })
 });

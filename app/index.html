@@ -50,7 +50,7 @@
             <p>The traditional rental companies usually offer really fancy cars to their customers. Audi, Mercedes, you name it.</p>
             <p>After some research, we discovered that not everybody cares about the car they are driving. They just need to get somewhere, with the comfort and freedom of a car. <strong>Cheaply.</strong></p>
             <p>So, why not use slightly older, less fancy cars? There is nothing bad about them, if they are well maintained!</p>
-            <button class="heartbeat" id="interested">Seems cool, tell me more!</button>
+            <button class="heartbeat" id="interested" onclick="ga('send', 'event', 'Interest-Button', 'Interested', 'Interest');">Seems cool, tell me more!</button>
           </div>
           <img src="images/oldcar.jpg" alt="Old car image">
         </div>
@@ -138,6 +138,14 @@
           <h3>What if the car stops working while using it?</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci architecto consequuntur cum cupiditate delectus dignissimos earum enim eos, eum facilis id illum magni necessitatibus nisi placeat quidem, ullam voluptatem. Modi?</p>
         </article>
+      </section>
+      <section id="would-you">
+        <h2>So, what do you think about it? <br>Would you use it?</h2>
+        <section>
+          <button onclick="ga('send', 'event', 'Use-Choice', 'No', 'Would-Use');">Nope!</button>
+          <button onclick="ga('send', 'event', 'Use-Choice', 'Maybe', 'Would-Use');">Maybe</button>
+          <button onclick="ga('send', 'event', 'Use-Choice', 'Yes', 'Would-Use');">Yeah, definitely!</button>
+        </section>
       </section>
     </main>
     <footer role="contentinfo">
