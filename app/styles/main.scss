@@ -183,13 +183,23 @@ button {
   }
 }
 
-// Animations for button
+img {
+  padding: $default-padding/3;
+  border-radius: 5px;
+  background: #fff;
+}
+
+// Animations
 .jello-horizontal {
-  animation: jello-horizontal 1.5s cubic-bezier(0.215, 0.610, 0.355, 1.000) infinite both;
+  animation: jello-horizontal 1.5s cubic-bezier(0.215, 0.610, 0.355, 1.000) 2 both;
 }
 
 .heartbeat {
   animation: heartbeat 1.5s ease-in-out infinite both;
+}
+
+.color-change-5x {
+  animation: color-change-5x 8s linear infinite alternate both;
 }
 
 @keyframes jello-horizontal {
@@ -239,6 +249,24 @@ button {
   }
 }
 
+@keyframes color-change-5x {
+  0% {
+    background: #19dcea;
+  }
+  25% {
+    background: #b22cff;
+  }
+  50% {
+    background: #ea2222;
+  }
+  75% {
+    background: #f5be10;
+  }
+  100% {
+    background: #3bd80d;
+  }
+}
+
 
 
 nav {
@@ -247,9 +275,10 @@ nav {
   top: 0;
   z-index:1;
   background: rgba(0,0,0,.8);
+  z-index:2;
 
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
 
   h4 {
@@ -339,9 +368,6 @@ main {
 
       img {
         transform: scale(.9) rotate(-5deg) translateY(-100px);
-        padding: $default-padding/3;
-        border-radius: 5px;
-        background: #fff;
       }
     }
 
@@ -440,7 +466,9 @@ main {
       width: 100%;
       overflow: hidden;
       background: #000;
-      min-height: 80vh;
+
+      display: flex;
+      align-items: center;
 
       h2 {
         flex-basis: 100%;
@@ -448,7 +476,7 @@ main {
       }
 
       h2, button {
-        z-index: 100;
+      z-index: 1;
         color: white;
       }
 
@@ -464,6 +492,24 @@ main {
         justify-content: space-between;
         align-items: center;
         flex-wrap: wrap;
+      }
+
+      .car-picture {
+        color: white;
+        text-align: center;
+        z-index: 1;
+        width: 100%;
+        padding: $default-padding;
+
+        display: none;
+        //display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        img {
+          width:50%;
+        }
       }
 
       button:hover {

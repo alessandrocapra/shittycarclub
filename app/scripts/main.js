@@ -15,6 +15,14 @@ $(document).scroll(function() {
   }
 });
 
+// show the feedback when someone clicks on the feedback buttons at the bottom
+$(document).ready(function () {
+  $('#would-you button').on('click', function () {
+
+    $('.car-picture').fadeIn(1000).css('display', 'flex');
+  })
+});
+
 // Code for slideshow
 var slideIndex = 1;
 showSlides(slideIndex);
