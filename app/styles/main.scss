@@ -253,7 +253,7 @@ nav {
   align-items: center;
 
   h4 {
-    //display: none;
+    display: none;
     padding: $default-padding/6;
     font-size:1.4em;
     font-weight:$font-weight-bold;
@@ -440,9 +440,16 @@ main {
       width: 100%;
       overflow: hidden;
       background: #000;
+      min-height: 80vh;
+
+      h2 {
+        flex-basis: 100%;
+        margin-bottom:1em;
+      }
 
       h2, button {
         z-index: 100;
+        color: white;
       }
 
       video {
@@ -456,6 +463,7 @@ main {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        flex-wrap: wrap;
       }
 
       button:hover {

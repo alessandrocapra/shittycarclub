@@ -1,3 +1,20 @@
+var viewportWidth = $(window).width();
+var viewportHeight = $(window).height();
+
+// show the title after scrolling the first part of the page
+
+$(document).scroll(function() {
+  var y = $(this).scrollTop();
+  if (y > viewportHeight*.8) {
+    $('#title').fadeIn();
+    $('.menu').css('justify-content', 'space-between');
+  } else {
+    $('#title').fadeOut(500, function () {
+      $('.menu').css('justify-content', 'flex-end');
+    });
+  }
+});
+
 // Code for slideshow
 var slideIndex = 1;
 showSlides(slideIndex);
