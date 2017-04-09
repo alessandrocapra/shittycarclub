@@ -361,13 +361,25 @@ main {
         display: flex;
         justify-content: space-between;
 
+        @include forLargeScreens(768){
+          flex-wrap: wrap;
+        }
+
         div {
           flex-basis:40%;
+
+          @include forLargeScreens(768){
+            flex-basis: 100%;
+          }
         }
       }
 
       img {
         transform: scale(.9) rotate(-5deg) translateY(-100px);
+
+        @include forLargeScreens(768){
+          transform: scale(.7) rotate(-5deg) translateY(0px);
+        }
       }
     }
 

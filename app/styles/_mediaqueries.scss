@@ -1,4 +1,4 @@
-// Mobile-first Media Queries Mixin
+// Desktop-first Media Queries Mixin
 @mixin forLargeScreens($width) {
-  @media (min-width: $width/16+em) { @content }
+  @media (max-width: $width/16+em) { @content }
 }
