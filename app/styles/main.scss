@@ -432,12 +432,21 @@ main {
         padding:$default-padding;
         flex-basis:50%;
 
+        @include forLargeScreens(800){
+          flex-basis: 100%;
+          padding-left: 0;
+        }
+
         &:nth-child(even){
           padding-left: 0;
         }
 
         &:nth-child(odd){
           padding-right: 0;
+
+          @include forLargeScreens(800){
+            padding-right:$default-padding;
+          }
         }
       }
 
