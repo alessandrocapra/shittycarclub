@@ -151,7 +151,7 @@ body {
   color: #333;
   margin: 0;
 
-  @include forLargeScreens(768){
+  @include forLargeScreens(600){
     font-size:.8em;
   }
 }
@@ -331,7 +331,7 @@ header {
   align-items: center;
   flex-direction: column;
 
-  @include forLargeScreens(768){
+  @include forLargeScreens(600){
     min-height: 40vh;
   }
 
@@ -345,7 +345,7 @@ header {
     right: 0;
     z-index: -100;
 
-    @include forLargeScreens(768){
+    @include forLargeScreens(600){
       top: -30%;
     }
   }
@@ -357,7 +357,7 @@ main {
     padding: $default-padding;
     min-height:50vh;
 
-    @include forLargeScreens(768){
+    @include forLargeScreens(600){
       min-height:30vh;
     }
 
@@ -376,14 +376,14 @@ main {
         display: flex;
         justify-content: space-between;
 
-        @include forLargeScreens(768){
+        @include forLargeScreens(600){
           flex-wrap: wrap;
         }
 
         div {
           flex-basis:40%;
 
-          @include forLargeScreens(768){
+          @include forLargeScreens(600){
             flex-basis: 100%;
           }
         }
@@ -392,7 +392,7 @@ main {
       img {
         transform: scale(.9) rotate(-5deg) translateY(-100px);
 
-        @include forLargeScreens(768){
+        @include forLargeScreens(600){
           transform: scale(.7) rotate(-5deg) translateY(0px);
         }
       }
@@ -541,7 +541,7 @@ main {
 
       button {
 
-        @include forLargeScreens(768){
+        @include forLargeScreens(600){
           flex-basis: 51%;
           margin-bottom:2em;
         }
