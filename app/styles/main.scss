@@ -3,10 +3,10 @@
 
 @import url('https://fonts.googleapis.com/css?family=Cardo:400,700|Pathway+Gothic+One');
 
+@import "mediaqueries";
 @import "functions";
 @import "variables";
 @import "typography";
-@import "mediaqueries";
 
 *, *::after, *::before {
   box-sizing: border-box;
@@ -151,7 +151,7 @@ body {
   color: #333;
   margin: 0;
 
-  @include forLargeScreens(600){
+  @include forLargeScreens(800){
     font-size:.8em;
   }
 }
@@ -182,7 +182,15 @@ button {
   cursor: pointer;
 
   &#interested {
-    font-size:1.8em;
+    font-size:2em;
+
+    @include forLargeScreens(800){
+      font-size:2.5em;
+    }
+  }
+
+  @include forLargeScreens(800){
+    font-size:2em;
   }
 }
 
@@ -331,8 +339,8 @@ header {
   align-items: center;
   flex-direction: column;
 
-  @include forLargeScreens(600){
-    min-height: 40vh;
+  @include forLargeScreens(800){
+    min-height: 35vh;
   }
 
   video {
@@ -345,7 +353,7 @@ header {
     right: 0;
     z-index: -100;
 
-    @include forLargeScreens(600){
+    @include forLargeScreens(800){
       top: -30%;
     }
   }
@@ -357,7 +365,7 @@ main {
     padding: $default-padding;
     min-height:50vh;
 
-    @include forLargeScreens(600){
+    @include forLargeScreens(800){
       min-height:30vh;
     }
 
@@ -372,18 +380,25 @@ main {
       background-size:cover;
       color: $mixed-secondary-black;
 
+      @include forLargeScreens(800){
+        min-height: 50vh;
+      }
+
+      button {
+        //margin-top:2em;
+      }
       .content {
         display: flex;
         justify-content: space-between;
 
-        @include forLargeScreens(600){
+        @include forLargeScreens(800){
           flex-wrap: wrap;
         }
 
         div {
           flex-basis:40%;
 
-          @include forLargeScreens(600){
+          @include forLargeScreens(800){
             flex-basis: 100%;
           }
         }
@@ -392,8 +407,9 @@ main {
       img {
         transform: scale(.9) rotate(-5deg) translateY(-100px);
 
-        @include forLargeScreens(600){
-          transform: scale(.7) rotate(-5deg) translateY(0px);
+        @include forLargeScreens(800){
+          //transform: scale(.7) rotate(-5deg) translateY(0px);
+          display: none;
         }
       }
     }
@@ -541,7 +557,7 @@ main {
 
       button {
 
-        @include forLargeScreens(600){
+        @include forLargeScreens(800){
           flex-basis: 51%;
           margin-bottom:2em;
         }

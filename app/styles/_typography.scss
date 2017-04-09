@@ -39,4 +39,8 @@ p {
   font-size:$body-font-size;
   line-height:$body-line-height;
   max-width: 30em;
+
+  @include forLargeScreens(800){
+    font-size: $body-font-size*1.3;
+  }
 }
