@@ -1,8 +1,6 @@
-var viewportWidth = $(window).width();
 var viewportHeight = $(window).height();
 
 // show the title after scrolling the first part of the page
-
 $(document).scroll(function() {
   var y = $(this).scrollTop();
   if (y > viewportHeight*.8) {
@@ -15,11 +13,18 @@ $(document).scroll(function() {
   }
 });
 
-// show the feedback when someone clicks on the feedback buttons at the bottom
-$(document).ready(function () {
-  $('#would-you button').on('click', function () {
 
+$(document).ready(function () {
+
+  // show the feedback when someone clicks on the feedback buttons at the bottom
+  $('#would-you button').on('click', function () {
     $('.car-picture').fadeIn(1000).css('display', 'flex');
+  })
+
+  // expand menu on hamburger click
+  $('.hamburger-toggle').on('click', function () {
+    $(this).toggleClass('position-abs');
+    $('.menu li').toggleClass('active-li');
   })
 });
 
@@ -68,6 +73,10 @@ $(document).ready(function(){
 // navigation from menu to content
 $(function() {
   $('a[href*="#"]:not([href="#"])').click(function() {
+
+    // hide the menu once the element is clicked
+    $('.menu li').removeClass('active-li');
+
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
       var target = $(this.hash);
       target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
