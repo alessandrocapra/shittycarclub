@@ -24,13 +24,12 @@
 
 //Flexbox container
 .flex-container {
+  display: flex;
   margin-bottom: 10px;
+
   //Remove the margin from the last flexbox container
   &:last-of-type {
     margin-bottom: 0;
-  }
-  @include forLargeScreens(640) {
-    display: flex;
   }
 }
 
@@ -40,7 +39,7 @@
   //max-width: 1000px;
   position: relative;
   margin: auto;
-  min-height:70vh;
+  //min-height:70vh;
 }
 
 .mySlides {
@@ -151,6 +150,10 @@ body {
   font-size:1em;
   color: #333;
   margin: 0;
+
+  @include forLargeScreens(768){
+    font-size:.8em;
+  }
 }
 
 form {
@@ -328,6 +331,10 @@ header {
   align-items: center;
   flex-direction: column;
 
+  @include forLargeScreens(768){
+    min-height: 40vh;
+  }
+
   video {
     position: absolute;
     min-height: 100%;
@@ -337,6 +344,10 @@ header {
     bottom: 0;
     right: 0;
     z-index: -100;
+
+    @include forLargeScreens(768){
+      top: -30%;
+    }
   }
 }
 
@@ -345,6 +356,10 @@ main {
   section {
     padding: $default-padding;
     min-height:50vh;
+
+    @include forLargeScreens(768){
+      min-height:30vh;
+    }
 
     h2 {
       margin-bottom: 0;
@@ -524,8 +539,16 @@ main {
         }
       }
 
-      button:hover {
-        animation: heartbeat 1.5s ease-in-out infinite both;
+      button {
+
+        @include forLargeScreens(768){
+          flex-basis: 51%;
+          margin-bottom:2em;
+        }
+
+        &:hover {
+          animation: heartbeat 1.5s ease-in-out infinite both;
+        }
       }
     }
   }
