@@ -28,6 +28,8 @@ h2 {
 
   &#slogan {
     color: $cream;
+    padding:.5em 1em;
+    text-align: center;
 
     @include forLargeScreens(550){
       font-size:4.1em;

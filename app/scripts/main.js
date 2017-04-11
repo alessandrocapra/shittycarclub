@@ -1,4 +1,11 @@
+var viewportWidth = $(window).width();
 var viewportHeight = $(window).height();
+
+// disable video autoplay for mobile
+if (viewportWidth < 768){
+  console.log("Removed video");
+  $('video').remove();
+}
 
 // show the title after scrolling the first part of the page
 $(document).scroll(function() {
@@ -82,7 +89,7 @@ $(function() {
       target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
       if (target.length) {
         $('html, body').animate({
-          scrollTop: target.offset().top
+          scrollTop: target.offset().top - 45
         }, 1000);
         return false;
       }
