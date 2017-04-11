@@ -1,12 +1,6 @@
 var viewportWidth = $(window).width();
 var viewportHeight = $(window).height();
 
-// disable video autoplay for mobile
-if (viewportWidth < 768){
-  console.log("Removed video");
-  $('video').remove();
-}
-
 // show the title after scrolling the first part of the page
 $(document).scroll(function() {
   var y = $(this).scrollTop();
@@ -22,6 +16,11 @@ $(document).scroll(function() {
 
 
 $(document).ready(function () {
+
+  // disable video autoplay for mobile
+  if (viewportWidth < 800)
+    console.log('Removed video');
+    $('video').remove();
 
   // show the feedback when someone clicks on the feedback buttons at the bottom
   $('#would-you button').on('click', function () {
