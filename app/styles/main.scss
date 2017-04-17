@@ -53,6 +53,8 @@
   img {
     width:300px;
     height: 520px;
+    position: relative;
+    right: 0;
 
     @include forLargeScreens(550){
       width:150px;
@@ -61,7 +63,7 @@
 
     &.select-car {
       background: url(../images/Selectacar.png) no-repeat center;
-      background-size: 80%;
+      background-size: 75%;
 
       @include forLargeScreens(550){
         background-size: 75%;
@@ -71,7 +73,7 @@
 
     &.unlock {
       background: url(../images/Unlock.png) no-repeat center;
-      background-size: 80%;
+      background-size: 75%;
 
       @include forLargeScreens(550){
         background-size: 75%;
@@ -81,7 +83,7 @@
 
     &.parking {
       background: url(../images/parking.png) no-repeat center;
-      background-size: 80%;
+      background-size: 75%;
 
       @include forLargeScreens(550){
         background-size: 75%;
@@ -125,6 +127,10 @@
 
   @include forLargeScreens(550){
     margin: 0;
+  }
+
+  p {
+    max-width:17em;
   }
 }
 
