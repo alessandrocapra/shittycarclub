@@ -218,6 +218,7 @@ button {
   background: $soft-main-color;
   color: #fff;
   cursor: pointer;
+  min-width:8em;
 
   &#interested {
     font-size:2em;
@@ -583,6 +584,15 @@ main {
 
       & > * {
         flex: 1 1 100%;
+      }
+
+      #fuel-pricing {
+        text-align: center;
+        width: 100%;
+
+        p {
+          max-width: 100%;
+        }
       }
 
       .flex-container {

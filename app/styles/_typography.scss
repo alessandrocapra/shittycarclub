@@ -50,6 +50,11 @@ p {
   line-height:$body-line-height;
   max-width: 30em;
 
+  &.small {
+    font-size:$body-font-size*0.8;
+    margin-top:-1em;
+  }
+
   @include forLargeScreens(800){
     font-size: $body-font-size*1.3;
   }
