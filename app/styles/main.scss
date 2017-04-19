@@ -548,6 +548,14 @@ main {
     &#faq{
       flex-wrap: wrap;
 
+      h3 {
+        font-size:2.5em;
+      }
+
+      p {
+        font-size: $body-font-size * .8;
+      }
+
       & > article {
         padding:$default-padding;
         flex-basis:50%;
