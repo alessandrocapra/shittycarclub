@@ -548,16 +548,12 @@ main {
     &#faq{
       flex-wrap: wrap;
 
-      h3 {
-        font-size:2.5em;
-      }
-
-      p {
-        font-size: $body-font-size * .8;
+      h2 {
+        flex-basis: 100%;
       }
 
       & > article {
-        padding:$default-padding;
+        padding:$default-padding 0 $default-padding $default-padding;
         flex-basis:50%;
 
         @include forLargeScreens(800){
