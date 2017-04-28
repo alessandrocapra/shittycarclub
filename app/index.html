@@ -122,6 +122,22 @@
           <p class="small">Always based on current gas price, now: 1,49 €/l</p>
         </div>
       </section>
+      <section id="would-you">
+        <video autoplay muted loop>
+          <source src="videos/Orchestra/WEBM/Orchestra.webm" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
+          <source src="videos/Orchestra/Mp4/Orchestra.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
+        </video>
+        <section>
+          <h2>So, what do you think about it? Would you try it out?</h2>
+          <button onclick="ga('send', 'event', 'Use-Choice', 'No', 'Would-Use');">Nope!</button>
+          <button onclick="ga('send', 'event', 'Use-Choice', 'Maybe', 'Would-Use');">Maybe</button>
+          <button onclick="ga('send', 'event', 'Use-Choice', 'Yes', 'Would-Use');">Yeah, definitely!</button>
+          <div class="car-picture">
+            <p>Thanks for the feedback!<br> Have an awesome, average old car picture in return :)</p>
+            <img class="jello-horizontal" src="images/car-surprise.jpg" alt="An awesome, average old car">
+          </div>
+        </section>
+      </section>
       <section id="faq" class="flex-container">
         <h2>Frequently Asked Questions</h2>
         <article>
@@ -143,8 +159,7 @@
         </article>
         <article>
           <h3>How do I rent the car for longer period?</h3>
-          <p>The rental is transformed automatically from short to long after you have reserved the car for more than 6 hours. After 6 hours, the price stays at 30 € for the rest of the day.</p>
-          <p>After every 24 hours of using the car, you are charged additional 30€ for the new day.</p>
+          <p>When you select a car in the app, you can choose between short and long rental. In short rental, you will be charged for every starting hour. In long rental, you will be charged for every starting day.</p>
         </article>
         <article>
           <h3>What if the car stops working?</h3>
@@ -173,25 +188,9 @@
           <p>You can cancel the reservation for free anytime before unlocking the car doors.</p>
         </article>
       </section>
-      <section id="would-you">
-        <video autoplay muted loop>
-          <source src="videos/Orchestra/WEBM/Orchestra.webm" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
-          <source src="videos/Orchestra/Mp4/Orchestra.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
-        </video>
-        <section>
-          <h2>So, what do you think about it? Would you try it out?</h2>
-          <button onclick="ga('send', 'event', 'Use-Choice', 'No', 'Would-Use');">Nope!</button>
-          <button onclick="ga('send', 'event', 'Use-Choice', 'Maybe', 'Would-Use');">Maybe</button>
-          <button onclick="ga('send', 'event', 'Use-Choice', 'Yes', 'Would-Use');">Yeah, definitely!</button>
-          <div class="car-picture">
-            <p>Thanks for the feedback!<br> Have an awesome, average old car picture in return :)</p>
-            <img class="jello-horizontal" src="images/car-surprise.jpg" alt="An awesome, average old car">
-          </div>
-        </section>
-      </section>
     </main>
     <footer role="contentinfo">
-      <p>Copyright 2017 - JustaCar</p>
+      <p>Copyright 2017 - JustaCar<br>Prototype concept made by students of Aalto University on Design project course</p>
     </footer>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->

@@ -5,7 +5,7 @@ var viewportHeight = $(window).height();
 $(document).scroll(function() {
   var y = $(this).scrollTop();
   if (y > viewportHeight*.8) {
-    $('#title').fadeIn();
+    $('#title').fadeIn().css('display','inline-block').css('width', '80%');
     $('.menu').css('justify-content', 'space-between');
   } else {
     $('#title').fadeOut(500, function () {

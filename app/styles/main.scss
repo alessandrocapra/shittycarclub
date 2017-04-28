@@ -368,6 +368,8 @@ nav {
     @include forLargeScreens(550){
       color: $orange;
       text-transform: capitalize;
+      padding: .1em;
+      width: 40%;
     }
   }
 
@@ -580,6 +582,7 @@ main {
           rgba($cream, 0.8)
       ), url(../images/oldcar.jpg) center no-repeat;
       background-size:cover;
+      margin-bottom:0;
 
       flex-wrap: wrap;
       justify-content: center;
@@ -738,6 +741,7 @@ main {
 footer {
   display: flex;
   justify-content: center;
+  text-align: center;
   color: $cream;
 
   font-family:$headings-font-family;
